@@ -97,7 +97,7 @@ const Portfolio = () => {
     : projects.filter(project => project.category === activeFilter);
 
   return (
-    <section id="portfolio" className="py-20">
+    <section id="portfolio" className="py-20 scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
@@ -142,7 +142,7 @@ const Portfolio = () => {
         </motion.div>
 
         {/* Projects Grid */}
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
           {filteredProjects.map((project, index) => (
             <motion.div
               key={`${project.title}-${activeFilter}`}
@@ -154,7 +154,7 @@ const Portfolio = () => {
               <Card className={`overflow-hidden card-gradient border-border/50 hover:border-primary/30 transition-smooth group ${
                 project.featured ? 'lg:col-span-2' : ''
               }`}>
-                <div className={`grid ${project.featured ? 'lg:grid-cols-2' : 'grid-cols-1'} h-full`}>
+                <div className={`grid ${project.featured ? 'md:grid-cols-2' : 'grid-cols-1'} h-full`}>
                   {/* Project Image */}
                   <div className="relative overflow-hidden">
                     <div className="aspect-video overflow-hidden">

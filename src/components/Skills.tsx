@@ -68,7 +68,7 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20">
+    <section id="skills" className="py-20 scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
@@ -86,7 +86,7 @@ const Skills = () => {
         </motion.div>
 
         {/* Skill Categories */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
           {skillCategories.map((category, index) => (
             <motion.div
               key={index}

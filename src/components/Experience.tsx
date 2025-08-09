@@ -41,7 +41,7 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-20 bg-muted/30">
+    <section id="experience" className="py-20 bg-muted/30 scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
@@ -67,7 +67,7 @@ const Experience = () => {
               transition={{ duration: 0.8, delay: index * 0.2 }}
             >
               <Card className="p-8 card-gradient border-border/50 hover:border-primary/30 transition-smooth">
-                <div className="grid lg:grid-cols-3 gap-8">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {/* Company Info */}
                   <div className="lg:col-span-1">
                     <div className="flex items-center space-x-3 mb-4">

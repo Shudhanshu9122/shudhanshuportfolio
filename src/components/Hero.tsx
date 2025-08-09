@@ -12,7 +12,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen relative overflow-hidden flex items-center justify-center">
+    <section id="home" className="min-h-screen relative overflow-hidden flex items-center justify-center scroll-mt-24">
       {/* Animated Background */}
       <div className="absolute inset-0 hero-gradient opacity-20" />
       <div className="absolute inset-0">
@@ -38,7 +38,7 @@ const Hero = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -140,7 +140,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="relative"
           >
-            <div className="relative w-80 h-80 md:w-96 md:h-96 mx-auto">
+            <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 mx-auto">
               {/* Glowing background */}
               <div className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-secondary rounded-full blur-3xl opacity-30 animate-glow" />
               
