@@ -5,6 +5,14 @@ import { ExternalLink, Github, Filter } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
+// Import project images
+import gatepreportalImage from '@/assets/gatepreportal.jpg';
+import fashionPlatformImage from '@/assets/fashion-platform.jpg';
+import fitphysiqueImage from '@/assets/fitphysique.jpg';
+import aiDisasterImage from '@/assets/ai-disaster-predictor.jpg';
+import designSystemImage from '@/assets/design-system.jpg';
+import openSourceImage from '@/assets/open-source-tools.jpg';
+
 const Portfolio = () => {
   const [ref, inView] = useInView({
     threshold: 0.1,
@@ -19,7 +27,7 @@ const Portfolio = () => {
       category: 'Web',
       description: 'A comprehensive competitive exam mock test platform built with modern web technologies.',
       longDescription: 'Advanced mock test platform for competitive exams featuring real-time scoring, detailed analytics, and adaptive question difficulty. Built with React and Supabase for seamless user experience.',
-      image: '/api/placeholder/600/400',
+      image: gatepreportalImage,
       technologies: ['React', 'Vite', 'Supabase', 'Tailwind CSS', 'TypeScript'],
       liveUrl: '#',
       githubUrl: '#',
@@ -30,7 +38,7 @@ const Portfolio = () => {
       category: 'Web',
       description: 'Real-time 3D clothing customization platform with interactive design tools.',
       longDescription: 'Revolutionary fashion platform enabling real-time 3D clothing customization with advanced visualization, material selection, and collaborative design features.',
-      image: '/api/placeholder/600/400',
+      image: fashionPlatformImage,
       technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Vite', 'Three.js'],
       liveUrl: '#',
       githubUrl: '#',
@@ -41,7 +49,7 @@ const Portfolio = () => {
       category: 'Web',
       description: 'Modern gym and fitness website with interactive features and smooth animations.',
       longDescription: 'Comprehensive fitness platform featuring workout tracking, nutrition planning, and community features with smooth animations and responsive design.',
-      image: '/api/placeholder/600/400',
+      image: fitphysiqueImage,
       technologies: ['HTML5', 'CSS3', 'JavaScript', 'ScrollReveal', 'Swiper.js'],
       liveUrl: '#',
       githubUrl: '#',
@@ -52,7 +60,7 @@ const Portfolio = () => {
       category: 'Open Source',
       description: 'Machine learning model for natural disaster prediction and early warning systems.',
       longDescription: 'Advanced AI system for predicting natural disasters using machine learning algorithms and real-time data analysis for early warning systems.',
-      image: '/api/placeholder/600/400',
+      image: aiDisasterImage,
       technologies: ['Python', 'TensorFlow', 'Flask', 'React', 'AWS'],
       liveUrl: '#',
       githubUrl: '#',
@@ -63,7 +71,7 @@ const Portfolio = () => {
       category: 'UI-UX',
       description: 'Modern design system with reusable components and consistent branding.',
       longDescription: 'Comprehensive design system featuring modern UI components, consistent typography, and accessible color schemes for web applications.',
-      image: '/api/placeholder/600/400',
+      image: designSystemImage,
       technologies: ['Figma', 'CSS3', 'Tailwind CSS', 'Storybook'],
       liveUrl: '#',
       githubUrl: '#',
@@ -74,7 +82,7 @@ const Portfolio = () => {
       category: 'Open Source',
       description: 'Collection of developer tools and utilities for the open-source community.',
       longDescription: 'Various open-source tools and utilities designed to improve developer productivity and community collaboration.',
-      image: '/api/placeholder/600/400',
+      image: openSourceImage,
       technologies: ['JavaScript', 'Node.js', 'CLI Tools', 'Docker'],
       liveUrl: '#',
       githubUrl: '#',
@@ -149,15 +157,12 @@ const Portfolio = () => {
                 <div className={`grid ${project.featured ? 'lg:grid-cols-2' : 'grid-cols-1'} h-full`}>
                   {/* Project Image */}
                   <div className="relative overflow-hidden">
-                    <div className="aspect-video bg-gradient-to-br from-primary/20 via-accent/20 to-secondary/20 flex items-center justify-center">
-                      <div className="text-center">
-                        <div className="w-16 h-16 rounded-full bg-gradient-to-r from-primary to-accent flex items-center justify-center mx-auto mb-4">
-                          <span className="text-2xl font-bold text-primary-foreground">
-                            {project.title.charAt(0)}
-                          </span>
-                        </div>
-                        <p className="text-sm text-muted-foreground">Preview Coming Soon</p>
-                      </div>
+                    <div className="aspect-video overflow-hidden">
+                      <img 
+                        src={project.image} 
+                        alt={project.title}
+                        className="w-full h-full object-cover transition-smooth group-hover:scale-110"
+                      />
                     </div>
                     
                     {/* Overlay */}
