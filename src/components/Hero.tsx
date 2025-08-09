@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { ArrowDown, Download, Github, Linkedin, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import profileImage from '@/assets/profile-image.jpg';
+// import profileImage from '@/assets/profile-image.jpg'; // Replaced with uploaded image
 
 const Hero = () => {
   const scrollToSection = (href: string) => {
@@ -146,7 +146,7 @@ const Hero = () => {
               
               {/* Profile image */}
               <motion.img
-                src={profileImage}
+                src="/lovable-uploads/1abaeafc-22ee-4d21-8b2a-4cbb34300a0a.png"
                 alt="Shudhanshu Kumar"
                 className="relative z-10 w-full h-full object-cover rounded-full border-4 border-primary/30"
                 whileHover={{ scale: 1.05 }}
